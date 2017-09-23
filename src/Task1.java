@@ -89,6 +89,7 @@ public class Task1 {
 //        System.out.println(task1.distribution.get(task1.ageC));
 //        task1.countInfContent();
 //        System.out.println(task1.infContent);
+
 //    }
 
 }
