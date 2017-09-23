@@ -10,13 +10,7 @@ public class Main {
     final static Date D = new Date(1999, 5, 27);
 
     public static void main(String[] args) {
-//        Task1 task1 = new Task1(A, B, C, D);
-//        Date date = new Date(2017, 6, 2);
-//        task1.calculateAges(date);
-//        System.out.println(task1.ageA + " " + task1.ageB + " "+ task1.ageC + " "+ task1.ageD);
-//        System.out.println(task1.distribution.get(task1.ageC));
-//        task1.countInfContent();
-//        System.out.println(task1.infContent);
-//        Task3 task3 = new Task3(10, 4);
+        Task1 task1 = new Task1(A, B, C, D);
+        task1.execute();
     }
 }

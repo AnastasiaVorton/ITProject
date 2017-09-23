@@ -1,5 +1,7 @@
+import java.text.DecimalFormat;
 import java.util.Date;
 import java.util.HashMap;
+import java.util.Scanner;
 
 /**
  * Created by Nastya on 23.09.2017.
@@ -10,9 +12,11 @@ public class Task1 {
     int ageA, ageB, ageC, ageD; //Ages of team members
     HashMap<Integer, Integer> distribution; //Hash map to represent the distribution of ages of team members
     double infContent; //Information content of the message "”Random student’s	age	is C"
+    DecimalFormat decimalFormat = new DecimalFormat("#.##");
 
     /**
      * Class constructor
+     *
      * @param a A's date of birth
      * @param b B's date of birth
      * @param c C's date of birth
@@ -28,6 +32,7 @@ public class Task1 {
 
     /**
      * Calculates the current age of each student on a given day
+     *
      * @param currentDate - given date
      */
     public void calculateAges(Date currentDate) {
@@ -63,13 +68,14 @@ public class Task1 {
 
     /**
      * Puts the age to the hash map
+     *
      * @param a
      */
-    public void putToMap(int a){
-        if (distribution.get(a) == null){
+    public void putToMap(int a) {
+        if (distribution.get(a) == null) {
             distribution.put(a, 1);
         } else {
-            distribution.put(a, distribution.get(a)+1);
+            distribution.put(a, distribution.get(a) + 1);
         }
     }
 
@@ -78,18 +84,21 @@ public class Task1 {
      */
     public void countInfContent() {
         double probability = distribution.get(ageC) / 4.0;
-        infContent =  Math.log10(1.0/probability)/Math.log10(2);
+        infContent = Math.log10(1.0 / probability) / Math.log10(2);
+        System.out.println("The message *Random student's age is C* contains " + decimalFormat.format(infContent) + " bits of information");
     }
 
-//    public void executeTask1(){
-//        Task1 task1 = new Task1(A, B, C, D);
-//        Date date = new Date(2017, 6, 2);
-//        task1.calculateAges(date);
-//        System.out.println(task1.ageA + " " + task1.ageB + " "+ task1.ageC + " "+ task1.ageD);
-//        System.out.println(task1.distribution.get(task1.ageC));
-//        task1.countInfContent();
-//        System.out.println(task1.infContent);
-
-//    }
+    public void execute() {
+        System.out.println("Starting the execution of task 1...");
+        Scanner reader = new Scanner(System.in);
+        System.out.println("Please, enter the date.");
+        System.out.println("Enter day:");
+        int day = reader.nextInt();
+        System.out.println("Enter month:");
+        int month = reader.nextInt();
+        Date currentDate = new Date(2017, month, day);
+        calculateAges(currentDate);
+        countInfContent();
+    }
 
 }
