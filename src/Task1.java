@@ -5,4 +5,5 @@ import java.util.Date;
  * Class for task number 1
  */
 public class Task1 {
+
 }
