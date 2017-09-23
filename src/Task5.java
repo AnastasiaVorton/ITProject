@@ -19,9 +19,9 @@ class Task5 {
 
         //compute probability of death with marginal probability formula
         double probabilityOfDeath = DEATH_PROB_FROM_KILLING * (double)A / (double)AMOUNT +
-                                    DEATH_PROB_FROM_NORMAL  * (double)B / (double)AMOUNT +
-                                    DEATH_PROB_FROM_PLACEBO * (double)C / (double)AMOUNT +
-                                    DEATH_PROB_FROM_VITAMIN * (double)D / (double)AMOUNT;
+                DEATH_PROB_FROM_NORMAL  * (double)B / (double)AMOUNT +
+                DEATH_PROB_FROM_PLACEBO * (double)C / (double)AMOUNT +
+                DEATH_PROB_FROM_VITAMIN * (double)D / (double)AMOUNT;
 
         //compute answer with Bayes formula
         return DEATH_PROB_FROM_KILLING * (double)A / (double)AMOUNT / probabilityOfDeath;
@@ -30,9 +30,9 @@ class Task5 {
     static double computeSecondSubtask () {
         //compute probability of survival with joint probability formula
         return   (1 - DEATH_PROB_FROM_KILLING) *
-                 (1 - DEATH_PROB_FROM_NORMAL)  *
-                 (1 - DEATH_PROB_FROM_PLACEBO) *
-                 (1 - DEATH_PROB_FROM_VITAMIN);
+                (1 - DEATH_PROB_FROM_NORMAL)  *
+                (1 - DEATH_PROB_FROM_PLACEBO) *
+                (1 - DEATH_PROB_FROM_VITAMIN);
     }
 
     static void showSolution () {
