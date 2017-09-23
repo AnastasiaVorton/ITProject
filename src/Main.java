@@ -4,12 +4,12 @@ import java.util.Date;
  * Created by Nastya on 23.09.2017.
  */
 public class Main {
-    Date A = new Date(1998, 6, 20);
-    Date B = new Date(1998, 3, 17);
-    Date C = new Date(1998, 9, 28);
-    Date D = new Date(1999, 5, 27);
+    final static Date A = new Date(1998, 6, 20);
+    final static Date B = new Date(1998, 3, 17);
+    final static Date C = new Date(1998, 9, 28);
+    final static Date D = new Date(1999, 5, 27);
 
     public static void main(String[] args) {
-        Task1 task1 = new Task1(A,B,C,D);
+        Task2 task2 = new Task2(A,B,C,D);
     }
 }
