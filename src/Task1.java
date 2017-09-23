@@ -88,6 +88,9 @@ public class Task1 {
         System.out.println("The message *Random student's age is C* contains " + decimalFormat.format(infContent) + " bits of information");
     }
 
+    /**
+     * Executes task 1
+     */
     public void execute() {
         System.out.println("Starting the execution of task 1...");
         Scanner reader = new Scanner(System.in);
