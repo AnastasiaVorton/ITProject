@@ -10,6 +10,6 @@ public class Main {
     final static Date D = new Date(1999, 5, 27);
 
     public static void main(String[] args) {
-        Task2 task2 = new Task2(A,B,C,D);
+        Task3 task3 = new Task3(10, 4);
     }
 }
