@@ -29,9 +29,9 @@ class Task5 {
 
     static double computeSecondSubtask () {
         //compute probability of survival with joint probability formula
-        return  (1 - DEATH_PROB_FROM_KILLING) *
-                (1 - DEATH_PROB_FROM_NORMAL)  *
-                (1 - DEATH_PROB_FROM_PLACEBO) *
-                (1 - DEATH_PROB_FROM_VITAMIN);
+        return   (1 - DEATH_PROB_FROM_KILLING) *
+                 (1 - DEATH_PROB_FROM_NORMAL)  *
+                 (1 - DEATH_PROB_FROM_PLACEBO) *
+                 (1 - DEATH_PROB_FROM_VITAMIN);
     }
 }
