@@ -92,7 +92,6 @@ public class Task1 {
      * Executes task 1
      */
     public void execute() {
-        System.out.println("Starting the execution of task 1...");
         Scanner reader = new Scanner(System.in);
         System.out.println("Please, enter the date.");
         System.out.println("Enter day:");

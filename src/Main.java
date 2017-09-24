@@ -10,13 +10,13 @@ public class Main {
     final static Date D = new Date(1999, 5, 27);
 
     public static void main(String[] args) throws InterruptedException {
-        System.out.println("Task 1:\n=======");
+        System.out.println("=======\nTask 1:\n=======");
         Task1 task1 = new Task1(A, B, C, D);
         task1.execute();
         System.out.println("===============\nTask 1 finished\n===============\n\n");
         Thread.sleep(1000);
         System.out.println("=======\nTask 2:\n=======");
-        Task2 task2 = new Task2(A,B,C,D);
+        Task2 task2 = new Task2(A, B, C, D);
         task2.execute();
         System.out.println("===============\nTask 2 finished\n===============\n\n");
         Thread.sleep(1000);
