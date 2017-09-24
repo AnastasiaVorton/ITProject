@@ -35,11 +35,12 @@ class Task5 {
                 (1 - DEATH_PROB_FROM_VITAMIN);
     }
 
-    static void showSolution () {
+    static void execute () {
         System.out.println("Probability that victim has taken killing pill given that he has died:");
         System.out.printf("%.3f", Task5.computeFirstSubtask());
         System.out.println();
         System.out.println("Probability that victim has survived after taking all types of pills independently:");
         System.out.printf("%.3f", Task5.computeSecondSubtask());
+        System.out.println();
     }
 }

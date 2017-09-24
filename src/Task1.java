@@ -36,6 +36,7 @@ public class Task1 {
      * @param currentDate - given date
      */
     public void calculateAges(Date currentDate) {
+        distribution = new HashMap<>();
         Date dateA = new Date(currentDate.getYear(), A.getMonth(), A.getDate());
         Date dateB = new Date(currentDate.getYear(), B.getMonth(), B.getDate());
         Date dateC = new Date(currentDate.getYear(), C.getMonth(), C.getDate());
@@ -85,7 +86,6 @@ public class Task1 {
     public void countInfContent() {
         double probability = distribution.get(ageC) / 4.0;
         infContent = Math.log10(1.0 / probability) / Math.log10(2);
-        System.out.println("The message *Random student's age is C* contains " + decimalFormat.format(infContent) + " bits of information");
     }
 
     /**
@@ -102,6 +102,7 @@ public class Task1 {
         Date currentDate = new Date(2017, month, day);
         calculateAges(currentDate);
         countInfContent();
+        System.out.println("The message \"Random student's age is C\" contains " + decimalFormat.format(infContent) + " bits of information");
     }
 
 }
