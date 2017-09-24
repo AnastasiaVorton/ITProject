@@ -15,7 +15,7 @@ class Task5 {
     private static final double DEATH_PROB_FROM_PLACEBO = 0.007;
     private static final double DEATH_PROB_FROM_VITAMIN = 0.0;
 
-    static double computeFirstSubtask () {
+    double computeFirstSubtask () {
 
         //compute probability of death with marginal probability formula
         double probabilityOfDeath = DEATH_PROB_FROM_KILLING * (double)A / (double)AMOUNT +
@@ -27,7 +27,7 @@ class Task5 {
         return DEATH_PROB_FROM_KILLING * (double)A / (double)AMOUNT / probabilityOfDeath;
     }
 
-    static double computeSecondSubtask () {
+    double computeSecondSubtask () {
         //compute probability of survival with joint probability formula
         return   (1 - DEATH_PROB_FROM_KILLING) *
                 (1 - DEATH_PROB_FROM_NORMAL)  *
@@ -35,12 +35,12 @@ class Task5 {
                 (1 - DEATH_PROB_FROM_VITAMIN);
     }
 
-    static void execute () {
+    void execute () {
         System.out.println("Probability that victim has taken killing pill given that he has died:");
-        System.out.printf("%.3f", Task5.computeFirstSubtask());
+        System.out.printf("%.3f", computeFirstSubtask());
         System.out.println();
         System.out.println("Probability that victim has survived after taking all types of pills independently:");
-        System.out.printf("%.3f", Task5.computeSecondSubtask());
+        System.out.printf("%.3f", computeSecondSubtask());
         System.out.println();
     }
 }
