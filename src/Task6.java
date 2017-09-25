@@ -114,6 +114,6 @@ public class Task6 {
     void execute(String message) {
         double probability = computeSpamProb(message);
         System.out.print("This message is a spam with probability ");
-        System.out.printf("%.3f", probability);
+        System.out.printf("%.3f\n", probability);
     }
 }

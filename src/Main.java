@@ -31,6 +31,12 @@ public class Main {
         Task5 task5 = new Task5();
         task5.execute();
         System.out.println("===============\nTask 5 finished\n===============\n\n");
+        Thread.sleep(1000);
+        System.out.println("=======\nTask 6:\n=======");
         Task6 task6 = new Task6();
+        task6.execute("Free now only for you!");
+        System.out.println("===============\nTask 6 finished\n===============\n\n");
+
     }
 }
+
