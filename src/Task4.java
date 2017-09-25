@@ -81,7 +81,7 @@ public class Task4 {
 	}
 
 	/*
-		I(X,Y) = H(X) - H(X|Y) = H(Y) - H(Y|X) = H(Y)
+		I(X,Y) = H(X) - H(X|Y) = H(X) - H(X) + H(Y) = H(Y)
 
 	*/
 	public  double I_x_y() {

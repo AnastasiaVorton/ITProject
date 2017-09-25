@@ -1,8 +1,5 @@
 import java.util.Date;
 
-/**
- * Created by Nastya on 23.09.2017.
- */
 public class Main {
     final static Date A = new Date(1998, 6, 20);
     final static Date B = new Date(1998, 3, 17);
@@ -28,12 +25,12 @@ public class Main {
         System.out.println("=======\nTask 4:\n=======");
         Task4 task4 = new Task4();
         task4.execute();
-        //System.out.println("Damir, we expect your implementation here");
         System.out.println("===============\nTask 4 finished\n===============\n\n");
         Thread.sleep(1000);
         System.out.println("=======\nTask 5:\n=======");
         Task5 task5 = new Task5();
         task5.execute();
         System.out.println("===============\nTask 5 finished\n===============\n\n");
+        Task6 task6 = new Task6();
     }
 }
