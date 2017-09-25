@@ -26,7 +26,9 @@ public class Main {
         System.out.println("===============\nTask 3 finished\n===============\n\n");
         Thread.sleep(1000);
         System.out.println("=======\nTask 4:\n=======");
-        System.out.println("Damir, we expect your implementation here");
+        Task4 task4 = new Task4();
+        task4.execute();
+        //System.out.println("Damir, we expect your implementation here");
         System.out.println("===============\nTask 4 finished\n===============\n\n");
         Thread.sleep(1000);
         System.out.println("=======\nTask 5:\n=======");
