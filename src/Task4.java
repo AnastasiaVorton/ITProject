@@ -21,7 +21,10 @@ public class Task4 {
 	}
 
 
-	// sum of P(x)* log(P(x))
+	/*  sum of P(x)* log(P(x))
+		as prob of winning of any of A,B,C,D is equal
+		prob of getting outcome of length "m" is equal to (1/4)^m
+		*/
 	public  double H_x () {
 		double answ = 0;
 		double prob;
@@ -49,7 +52,7 @@ public class Task4 {
 	/*
 
 		as Y is completly determined by X (as we know X we can get Y)
-		Entropy of Y|X is 0
+		therefore entropy of Y|X is 0
 	
 	*/
 	public  double H_y_given_x() {
@@ -88,7 +91,7 @@ public class Task4 {
 
 
 	//recursive generate all posible combinations
-	public static void generate(String s) {
+	public  void generate(String s) {
 		if(is_good(s)) {
 			generate(s+'A');
 			generate(s + 'B');
@@ -101,10 +104,10 @@ public class Task4 {
 
 
 	/*
-		check whether given string has 3 same char
+		check whether given string has 3 'A' , 'B', 'C' or 'D'
 
 	*/
-	public static boolean is_good(String s) {
+	public  boolean is_good(String s) {
 		int a = 0,b = 0,c = 0,d =0;
 		for(char ch : s.toCharArray()) {
 			if(ch =='A') a++;
