@@ -6,7 +6,6 @@ public class Task4 {
 
 	public Task4() {
 		generate("");
-		all_outcomes = outcomes.size();
 		for( String s : outcomes) 
 			amount[s.length()-3]++;	
 	}
